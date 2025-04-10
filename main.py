@@ -2,7 +2,10 @@ from fastapi import FastAPI
 
 app = FastAPI()
 
+# Link de acesso no navegador - http://127.0.0.1:8000
 @app.get("/")
-def root():
-    """Retorna uma mensagem de boas-vindas."""
+async def root():
     return {"message": "Hello World"}
+
+
+

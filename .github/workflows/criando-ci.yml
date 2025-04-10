@@ -20,5 +20,7 @@ jobs:
           pip install pylint
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
       
-      - name: Analisar com Pylint
-        run: pylint $(git ls-files '*.py')
+      - name: Python Lint Code Scanning Action
+        uses: advanced-security/python-lint-code-scanning-action@v1.1.1
+        with:
+          linter: pylint

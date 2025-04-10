@@ -11,14 +11,13 @@ jobs:
       - name: Check out repository code
         uses: actions/checkout@v4
 
-      # Adicione este passo
       - name: Upload Artifact (dummy)
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: dummy-artifact
-          path: .  # Pode ser qualquer caminho, mesmo vazio
+          path: .
 
       - name: Python Lint Code Scanning Action
         uses: advanced-security/python-lint-code-scanning-action@v1.1.1
         with:
-          linter: pylint 
+          linter: pylint
